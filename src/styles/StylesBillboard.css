@@ -1,0 +1,31 @@
+.padreB {
+    margin-top: 300px;
+    padding: 30px 60px;
+    width: 100%;
+    background: #2A303C;
+    color: white;
+
+}
+.title{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.content {
+    position: relative;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px 48px;
+    width: 100%;
+    height: 100%;
+}
+
+.img_pop{
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 0;
+}
+

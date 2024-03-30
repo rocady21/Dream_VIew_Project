@@ -1,0 +1,27 @@
+.card_movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_card {
+
+    text-align: start;
+    margin: 5px 0px;
+}
+
+.img_card {
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+}
+
+.buy_ticket_card {
+    cursor: pointer;
+    background-color:  #554F95;
+    color: white;
+    border: none;
+    width: 200px;
+    border-radius: 0px 0px 15px 15px;
+    padding: 5px 0px;
+}

@@ -1,0 +1,131 @@
+.buy_ticket_p {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 2;
+}
+
+.img_popCorn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.p_form {
+    width: 600px;
+
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.form {
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h1,p {
+    align-self: flex-start;
+}
+
+.inputs {
+    width: 300px;
+
+    margin-top: 50px;
+}
+
+.form .inputs .input select,
+input {
+    color: white;
+    margin: 10px 0px;
+    background-color: transparent;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 2px solid #554F95;
+}
+
+.form .inputs .input {
+    width: 100%;
+    position: relative;
+
+}
+
+.form .inputs .input p {
+    font-size: 14px;
+    font-weight: 600;
+    width: 60%;
+    top: -5px;
+    left: 10px;
+    position: absolute;
+    background-color: #282828;
+    padding: 5px 15px 0px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+select option {
+    color: white;
+    background-color: #282828;
+    padding: 10px 20px;
+    line-height: 15px
+}
+
+select option:hover {
+    color: red;
+    background-color: #554F95;
+}
+
+.buttons_confirm {
+    margin-top: 30px;
+    margin: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.button_continue {
+    cursor: pointer;
+    text-align: center;
+    background-color: #282828;
+    color: white;
+    width: 40%;
+    border: 1px solid #554F95;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+.button_Finish {
+    cursor: pointer;
+    text-align: center;
+    background-color: #91C870;
+    color: black;
+    width: 40%;
+    border: 1px solid #554F95;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+.button_reset {
+    background-color: #282828;
+    color: white;
+    width: 40%;
+    border: 1px solid #554F95;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}

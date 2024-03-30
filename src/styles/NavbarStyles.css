@@ -1,0 +1,51 @@
+.padre {
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 35px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.buttonNavigation {
+    font-size: 18;
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.buy_ticket {
+    background-color: #554F95;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+
+.color_b {
+    background: #49BFBF;
+    color: white;
+}
+.img_icon{
+    width: 70px;
+    height: 50px;
+}
+
+.Error {
+    margin-top: 30px;
+    padding: 20px 10px;
+    width: 300px;
+    color: #BF0000;
+    border-left: 25px solid #BF0000;
+    background: #FF8C8C;
+}
