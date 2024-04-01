@@ -28,9 +28,9 @@ export const Carrousel = ()=> {
         if(body){
             body.style.height = "100vh"
             body.style.backgroundImage = `url(${current_movie.font_page})`
-            body.style.backgroundRepeat = 'no-repeat'; // Evita que la imagen se repita
-            body.style.backgroundSize = 'cover'; // Hace que la imagen cubra todo el fondo
-            body.style.backgroundPosition = 'center'; // Centra la imagen en el fondo
+            body.style.backgroundRepeat = 'no-repeat';
+            body.style.backgroundSize = 'cover';
+            body.style.backgroundPosition = 'center';
             body.style.backdropFilter = "blur(10px)"
             body.style.transition = "background-image 0.5s ease-in-out"
         }
