@@ -2,10 +2,11 @@ import React, { useEffect,useState } from "react"
 import "../styles/NavbarStyles.css"
 import VectorImage from "../assets/Vector.png"
 import BuyTicket from "../assets/Button_Vector (2).png"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 export const Navbar = ()=> {
-
+    
     const [stateWidth,setStateWidth] = useState(window.innerWidth)
+    const location = useLocation()
 
     const changewidth = () =>{
         setStateWidth(window.innerWidth)
@@ -20,6 +21,28 @@ export const Navbar = ()=> {
     },[])
 
 
+    const navigate_func = (route, key) => {
+        const location_pathname = location.pathname
+    
+        if (route === location_pathname) {
+          if (key === "cartelera") {
+            window.scrollTo(0, document.body.scrollHeight)
+          } else {
+            window.scrollTo(0, 0)
+          }
+        } else {
+          if (key === "cartelera") {
+            navigate(route)
+            setTimeout(() => {
+              window.scrollTo(0, document.body.scrollHeight)
+            }, 100)
+          } else {
+            navigate(route)
+            window.scrollTo(0, 0) 
+          }
+        }
+      };
+
     const navigate = useNavigate()
 
     return (
@@ -28,9 +51,9 @@ export const Navbar = ()=> {
                 {
                     stateWidth > 600? 
                     <div className="buttons">
-                        <button onClick={()=> navigate("/")} className="buttonNavigation">Destacados</button>
-                        <button onClick={()=> navigate("/")} className="buttonNavigation">Cartelera</button>
-                        <button onClick={()=> navigate("/buy_ticket")} className="buy_ticket">Comprar Ticket</button>
+                        <button onClick={()=> navigate_func("/","destacado")} className="buttonNavigation">Destacados</button>
+                        <button onClick={()=> navigate_func("/","cartelera")} className="buttonNavigation">Cartelera</button>
+                        <button onClick={()=> navigate_func("/buy_ticket")} className="buy_ticket">Comprar Ticket</button>
                     </div>
                     :
                     <div className="buttons">
