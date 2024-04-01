@@ -16,17 +16,9 @@ export const Carrousel = ()=> {
 
     const handleCurrentPage = (key)=> {
         if(key === "next") {
-            if(currentImg + 1 > lenghtMovies) {
-                setCurrentImage(0)
-            } else {
-                setCurrentImage(currentImg + 1)
-            }
+            setCurrentImage(currentImg + 1)
         } else if(key === "prev") {
-            if(currentImg - 1 < 0) {
-                setCurrentImage(lenghtMovies)
-            } else {
-                setCurrentImage(currentImg - 1)
-            }
+            setCurrentImage(currentImg - 1)  
         }
     }
     const current_movie = CarrouselMovies[currentImg]
@@ -34,7 +26,6 @@ export const Carrousel = ()=> {
     useEffect(()=> {
         const body = document.querySelector("body")
         if(body){
-            console.log("cambiar");
             body.style.height = "100vh"
             body.style.backgroundImage = `url(${current_movie.font_page})`
             body.style.backgroundRepeat = 'no-repeat'; // Evita que la imagen se repita

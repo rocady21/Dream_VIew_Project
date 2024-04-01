@@ -4,6 +4,7 @@ const number_aleatory_between_numbers = (min, max) => {
 }
 
 export const generar_funciones_aleatorias = () => {
+    // esta func solo genera fechas aletorias de aqui a 1 año
     const now = new Date();
     const number_func = Math.floor(Math.random() * 10) + 1;
     let arr_days = [];
@@ -14,10 +15,11 @@ export const generar_funciones_aleatorias = () => {
         const sum_date = new Date(fecha_generada.setDate(fecha_generada.getDate() + days_aleatory));
         const boolean_number = number_aleatory_between_numbers(1, 2);
 
+        // para generar horas exactas
         const hours_aleatory = Math.floor(Math.random() * 24);
         const minutes_aleatory = boolean_number === 1 ? "30" : "00";
 
-        // Ajustar el formato de la fecha y hora
+        // genero una hoa aleatoria
         const new_hour = `${sum_date.getDate()}/${sum_date.getMonth() + 1}/${sum_date.getFullYear()} ${hours_aleatory}:${minutes_aleatory}`;
 
         arr_days.push(new_hour);

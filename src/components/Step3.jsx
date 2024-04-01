@@ -3,7 +3,6 @@ import Ticket from "../assets/Ticket.png"
 export const Step3 = ({stateForm})=> {
 
     const date = stateForm.funcion.split(" ")
-    console.log(date);
 
     return (
         <div className="message_user">

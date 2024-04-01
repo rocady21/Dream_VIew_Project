@@ -20,7 +20,6 @@ export const BuyTicket = ()=> {
 
 
     const onChangeStateForm = (key,value) => {
-            console.log("value",value);
             setStateForm({
                 ...stateForm,
                 [key]:value
