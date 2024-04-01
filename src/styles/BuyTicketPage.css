@@ -91,15 +91,15 @@ select option:hover {
     margin: auto;
     width: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     z-index: 10;
 
 }
 
 
 .button_continue {
+    margin-bottom: 15px;
     cursor: pointer;
     text-align: center;
     background-color: #282828;
@@ -111,6 +111,8 @@ select option:hover {
 }
 
 .button_Finish {
+    margin-bottom: 15px;
+
     cursor: pointer;
     text-align: center;
     background-color: #91C870;
@@ -122,12 +124,12 @@ select option:hover {
 }
 
 .button_reset {
+    border: none;
     cursor: pointer;
     background-color: #282828;
     color: white;
+    opacity: 0.5;
     width: 40%;
-    border: 1px solid #554F95;
-    border-radius: 5px;
     padding: 15px 30px;
 }
 
