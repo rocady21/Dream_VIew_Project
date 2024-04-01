@@ -5,7 +5,7 @@ import { BillBoard } from "../components/Billboard"
 
 export const Mainpage = ()=> {
     return (
-        <div className="padreA">
+        <div className="padreA inter-heading">
             <Carrousel/>
             <BillBoard/>
         </div>

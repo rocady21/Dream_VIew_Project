@@ -5,8 +5,9 @@
 }
 
 .title_card {
-
-    text-align: start;
+    height: 50px;
+    align-self: center;
+    text-align: center;
     margin: 5px 0px;
 }
 

@@ -3,8 +3,12 @@ import "../styles/StylesCarrousel.css"
 import Start from "../assets/Star Filled.png"
 import Trailer from "../assets/Button.png"
 import Next from "../assets/Next.png"
+import MoreThan from "../assets/More Than.png"
+import LessThan from "../assets/Less Than.png"
 
 import {CarrouselMovies} from "../utils/Movies"
+
+
 export const Carrousel = ()=> {
     const lenghtMovies = CarrouselMovies.length - 1
     const [currentImg,setCurrentImage] = useState(0)
@@ -31,23 +35,25 @@ export const Carrousel = ()=> {
         const body = document.querySelector("body")
         if(body){
             console.log("cambiar");
+            body.style.height = "100vh"
             body.style.backgroundImage = `url(${current_movie.font_page})`
             body.style.backgroundRepeat = 'no-repeat'; // Evita que la imagen se repita
             body.style.backgroundSize = 'cover'; // Hace que la imagen cubra todo el fondo
             body.style.backgroundPosition = 'center'; // Centra la imagen en el fondo
             body.style.backdropFilter = "blur(10px)"
+            body.style.transition = "background-image 0.5s ease-in-out"
         }
 
         return ()=> {
             body.style.background = "none"
         }
     },[currentImg])
-
+    
     return (
         <div className="Slider">
             <div className="slider_p">
                 {
-                    currentImg !== 0 &&<button onClick={()=> handleCurrentPage("prev") } className="button_prev">{"<"} </button>
+                    currentImg !== 0 &&<button onClick={()=> handleCurrentPage("prev") } className="button_prev"><img src={LessThan} alt="" /> </button>
                 }
                 <div className="image">
                     <div className="score">
@@ -55,7 +61,7 @@ export const Carrousel = ()=> {
                         <p> {current_movie.score}/10</p>
                         <p style={{fontWeight:800}}>IMDB</p>
                     </div>
-                    <img className="img" src={CarrouselMovies[currentImg].photo} alt="" />
+                    <img id="img" className="img" src={CarrouselMovies[currentImg].photo} alt="" />
                 </div>
                 <div className="info">
                     <div className="info_movie">
@@ -74,7 +80,7 @@ export const Carrousel = ()=> {
                     </div>
                 </div>
                 {
-                    currentImg !== lenghtMovies && <button onClick={()=> handleCurrentPage("next") }  className="button_next">{">"}</button>
+                    currentImg !== lenghtMovies && <button onClick={()=> handleCurrentPage("next") }  className="button_next"><img src={MoreThan} alt="" /></button>
 
                 }
                 

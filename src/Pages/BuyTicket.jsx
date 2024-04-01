@@ -36,7 +36,7 @@ export const BuyTicket = ()=> {
     }
 
     return (
-        <div className="buy_ticket_p">
+        <div className="buy_ticket_p inter-heading">
             <img className="img_popCorn" src={PopsCorn} alt="" />
             <img className="img_pop" src={Pop} alt="" />
             {

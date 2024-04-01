@@ -20,6 +20,10 @@
     cursor: pointer;
     background: none;
     border: none;
+    opacity: 0.4;
+}
+.buttonNavigation:hover {
+    opacity: 1;
 }
 
 .buy_ticket {
@@ -48,4 +52,10 @@
     color: #BF0000;
     border-left: 25px solid #BF0000;
     background: #FF8C8C;
+}
+
+@media screen and (max-width: 500px) {
+    .buttonNavigation{
+        font-size: 12px;
+    }
 }

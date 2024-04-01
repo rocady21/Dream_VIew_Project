@@ -7,7 +7,7 @@ import { AppRouter } from './Router/AppRouter'
 function App() {
   const height = window.innerHeight
   return (
-    <div style={{width:"100%",height:height}}>
+    <div className='inter-heading' style={{width:"100%",height:height}}>
       <AppRouter/>
     </div>
   )

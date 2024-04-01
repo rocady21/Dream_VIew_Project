@@ -1,3 +1,5 @@
+
+
 .button_prev {
     margin-right: 30px;
     background: transparent;
@@ -22,9 +24,10 @@
     width: 100%;
 }
 .slider_p{
+    height: auto;
     width: 70%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 125px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,7 +37,49 @@
     height: 500px;
     width: 300px;
     z-index: 10;
+    transition: ease-in-out ;
+    animation-name: slidein ;
+    animation-duration: 0.5s ;
+    
 }
+
+@keyframes slidein {
+    from {
+      opacity: 0.1;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+  
+    to {
+        opacity:1;
+    }
+  }
 .info{
     display: flex;
     flex-direction: column;
@@ -88,13 +133,8 @@
     width: 15;
     height: 15;
 }
-.button_action{
-    width: 75px;
-    height: 75px;
-}
 .buttons_action{
-    width: 50%;
-    
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -102,6 +142,58 @@
 }
 
 .button_buy_t{
+    width: 100px;
     background: transparent;
     border: none;
+}
+@media screen and (max-width: 1500px) {
+    .info_movie h1{
+        font-size: 25px;
+    }
+    .info_movie p{
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width: 1200px) {
+    .slider_p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button_next{
+        position: absolute;
+        top: 300px;
+        align-self: flex-end;
+    }
+    .button_prev {
+        position: absolute;
+        top: 300px;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .info .info_movie {
+        display: none;
+    }
+    .slider_p {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img{
+        width: 200px;
+        height: 350px;
+    }
+    .button_next {
+        top: 30%;
+    }
+    .button_prev{
+        top: 30%;
+    }
 }

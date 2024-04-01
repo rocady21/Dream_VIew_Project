@@ -37,7 +37,5 @@ export const generar_asientos_aleatorios = () => {
             asientos.push({ fila: fila, asiento: asiento });
         }
     }
-
-    console.log("aaaaaaa",asientos);
     return asientos;
 }

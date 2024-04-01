@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "../styles/BuyTicketPage.css"
-import {Movies,CarrouselMovies,AsientosDisponibles} from "../utils/Movies"
+import {Movies,CarrouselMovies} from "../utils/Movies"
 import { generar_asientos_aleatorios, generar_funciones_aleatorias } from "../utils/generar_funciones_aleatorias"
 
 export const Step1 = ({NextSteps,stateForm,onChangeStateForm}) => {
